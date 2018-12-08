@@ -1,19 +1,19 @@
-import random
 import os
 import argparse
+import random
 import json
 
 
-def generate(cases, num, r, dir='testCases'):
+def generate(cases, num, r, fileName='sorting', dir='testCases'):
     if not os.path.exists(dir):
         os.makedirs(dir)
 
-    with open('{}/sorting.json'.format(dir), 'w') as f:
+    with open('{}/{}.json'.format(dir, fileName), 'w') as f:
         outputs = []
         for _ in range(cases):
             li = []
             for _ in range(num):
-                li.append(random.randint(0, r + 1))
+                li.append(random.randint(0, r))
             outputs.append(li)
         json.dump(outputs, f)
     print('Done!\n')
@@ -41,6 +41,12 @@ if __name__ == '__main__':
         type=int,
         help='The range for the list (e.g. 0~1000, default=1000)'
     )
+    parser.add_argument(
+        '--name',
+        default='sorting',
+        type=str,
+        help='The name of the output [].json file (default: sorting)'
+    )
 
     args = parser.parse_args()
-    generate(args.tc, args.el, args.range)
+    generate(args.tc, args.el, args.range, args.name)
