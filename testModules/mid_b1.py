@@ -1,4 +1,5 @@
-def mid(x, y, z):
+def mid(li):
+    x, y, z = li
     m = z
     if (y < z):
         if (x < y):
@@ -10,8 +11,4 @@ def mid(x, y, z):
             m = y
         elif (x > z):
             m = x
-    print('done')
     return m
-
-
-print('ok')

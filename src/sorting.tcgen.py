@@ -11,11 +11,12 @@ def generate(cases, num, r, fileName='sorting', dir='testCases'):
     with open('{}/{}.json'.format(dir, fileName), 'w') as f:
         outputs = []
         for _ in range(cases):
-            li = []
+            li = {'input': []}
             for _ in range(num):
-                li.append(random.randint(0, r))
+                li['input'].append(random.randint(0, r))
+            li['result'] = sorted(li['input'])
             outputs.append(li)
-        json.dump(outputs, f)
+        json.dump(outputs, f, indent=2)
     print('Done!\n')
 
 
@@ -31,13 +32,13 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '-n', '--el',
-        default=8,
+        default=6,
         type=int,
         help='Number of element inside each list'
     )
     parser.add_argument(
         '-r', '--range',
-        default=1000,
+        default=500,
         type=int,
         help='The range for the list (e.g. 0~1000, default=1000)'
     )
