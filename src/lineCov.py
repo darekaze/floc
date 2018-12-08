@@ -44,9 +44,8 @@ def start(modName, funcName, testcases):
     with open(testcases) as json_data:
         tests = json.load(json_data)
 
-    res = []
     for test in tests:
-        current = tuple(test['input'][:])
+        current = tuple(test['input'])
         testCovLines[current] = {'coverlines': set()}
 
         sys.settrace(traceLine)
@@ -55,9 +54,9 @@ def start(modName, funcName, testcases):
 
         testCovLines[current]['result'] = int(not(output == test['result']))
 
+    res = []
     totalLine = initCovMatrix(res, modName)
     makeCovMatrix(res, totalLine)
-
     with open('result.json', 'w') as f:
         json.dump(res, f, indent=2)
 
