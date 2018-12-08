@@ -3,28 +3,38 @@ import argparse
 import json
 
 current = []
-testCovLines, lineCov = {}, {}
+testCovLines = {}
 
 
 def traceLine(frame, event, arg):
     if event == 'line':
         lineno = frame.f_lineno
-        testCovLines[current].add(lineno)
-        if lineno in list(lineCov.keys()):
-            lineCov[lineno].add(str(current))
-        else:
-            lineCov[lineno] = set([str(current)])
+        testCovLines[current]['coverlines'].add(lineno)
     return traceLine
 
 
-def makeResult(res, a, b):
-    print(current, a, b)
-    obj = {
-        'test': str(current),
-        'coverlines': list(testCovLines[current]),
-        'result': int(not(a == b))
-    }
-    res.append(obj)
+def initCovMatrix(res, modName):
+    with open('./tmods/{}.py'.format(modName)) as f:
+        for i, line in enumerate(f):
+            res.append({
+                '_line_no': i+1,
+                'code': line,
+                'coverage': [],
+                'fl': {}
+            })
+    return i + 1
+
+
+def makeCovMatrix(res, totalLine):
+    for t in testCovLines.values():
+        for i in range(totalLine):
+            stat = 'O'
+            if i+1 in t['coverlines']:
+                if t['result'] == 0:
+                    stat = 'P'
+                else:
+                    stat = 'F'
+            res[i]['coverage'].append(stat)
 
 
 def start(modName, funcName, testcases):
@@ -33,24 +43,23 @@ def start(modName, funcName, testcases):
     func = getattr(getattr(module, modName), funcName)
     with open(testcases) as json_data:
         tests = json.load(json_data)
-    res = []
 
+    res = []
     for test in tests:
         current = tuple(test['input'][:])
-        testCovLines[current] = set()
+        testCovLines[current] = {'coverlines': set()}
 
         sys.settrace(traceLine)
         output = func(test['input'])
         sys.settrace(None)
 
-        makeResult(res, output, test['result'])
+        testCovLines[current]['result'] = int(not(output == test['result']))
 
-    print(res)
+    totalLine = initCovMatrix(res, modName)
+    makeCovMatrix(res, totalLine)
 
     with open('result.json', 'w') as f:
         json.dump(res, f, indent=2)
-    # with open('AA.json', 'w') as f:
-    #     json.dump(testCovLines, f, indent=2)
 
 
 if __name__ == '__main__':

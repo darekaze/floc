@@ -20,9 +20,3 @@ def qSort(li):
     n = len(li)
     quickSort(li, 0, n-1)
     return li
-
-
-# arr = [7, 2, 3, 4, 5, 6]
-# n = len(arr)
-# quickSort(arr, 0, n-1)
-# print("Sorted array is:\n{}".format(arr))
