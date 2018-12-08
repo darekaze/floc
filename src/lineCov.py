@@ -1,5 +1,4 @@
 import sys
-import os
 import argparse
 import json
 
@@ -28,11 +27,12 @@ def makeResult(res, a, b):
     res.append(obj)
 
 
-def start(mod, funcName, testcases):
+def start(modName, funcName, testcases):
     global current
+    module = __import__('tmods.{}'.format(modName))
+    func = getattr(getattr(module, modName), funcName)
     with open(testcases) as json_data:
         tests = json.load(json_data)
-    # print(tests)
     res = []
 
     for test in tests:
@@ -40,7 +40,7 @@ def start(mod, funcName, testcases):
         testCovLines[current] = set()
 
         sys.settrace(traceLine)
-        output = eval("{}(test['input'])".format(funcName))
+        output = func(test['input'])
         sys.settrace(None)
 
         makeResult(res, output, test['result'])
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     parser.add_argument(
         'module',
         type=str,
-        help='Name of the test module (.py) in /testModules'
+        help='Name of the test module file (without .py) in /tmods'
     )
     parser.add_argument(
         'func',
@@ -75,11 +75,8 @@ if __name__ == '__main__':
     )
 
     args = parser.parse_args()
-    mod = '../testModules/{}'.format(args.module)
-
-    exec(compile(open(mod).read(), mod, 'exec'))
     start(
-        mod,
+        args.module,
         args.func,
         '../testCases/{}'.format(args.src)
     )
