@@ -44,7 +44,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 2,
@@ -88,7 +90,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 3,
@@ -132,7 +136,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 4,
@@ -176,7 +182,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 5,
@@ -220,7 +228,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 6,
@@ -264,7 +274,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 7,
@@ -308,7 +320,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 8,
@@ -352,7 +366,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 9,
@@ -396,7 +412,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 10,
@@ -440,7 +458,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 11,
@@ -484,7 +504,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 12,
@@ -528,7 +550,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 13,
@@ -572,7 +596,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 1.0,
+      "rank": 1
     },
     {
       "_line_no": 14,
@@ -616,7 +642,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 1.0,
+      "rank": 1
     },
     {
       "_line_no": 15,
@@ -660,7 +688,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 16,
@@ -704,7 +734,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 1.0,
+      "rank": 1
     },
     {
       "_line_no": 17,
@@ -748,7 +780,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 18,
@@ -792,7 +826,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 19,
@@ -836,7 +872,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 20,
@@ -880,7 +918,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 21,
@@ -924,7 +964,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 22,
@@ -968,7 +1010,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 23,
@@ -1012,7 +1056,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 24,
@@ -1056,7 +1102,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 25,
@@ -1100,7 +1148,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 26,
@@ -1144,7 +1194,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 27,
@@ -1188,7 +1240,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 28,
@@ -1232,7 +1286,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 29,
@@ -1276,7 +1332,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 30,
@@ -1320,7 +1378,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 31,
@@ -1364,7 +1424,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 32,
@@ -1408,7 +1470,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 33,
@@ -1452,7 +1516,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 34,
@@ -1496,7 +1562,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 35,
@@ -1540,7 +1608,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 36,
@@ -1584,7 +1654,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 37,
@@ -1628,7 +1700,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 38,
@@ -1672,7 +1746,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 39,
@@ -1716,7 +1792,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 40,
@@ -1760,7 +1838,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 41,
@@ -1804,7 +1884,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 42,
@@ -1848,7 +1930,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 43,
@@ -1892,7 +1976,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 44,
@@ -1936,7 +2022,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 45,
@@ -1980,7 +2068,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 30
     },
     {
       "_line_no": 46,
@@ -2024,7 +2114,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 47,
@@ -2068,7 +2160,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 48,
@@ -2112,7 +2206,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     },
     {
       "_line_no": 49,
@@ -2156,7 +2252,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 4
     }
   ]
 }
