@@ -1,14 +1,16 @@
 import json
 import sys
+from tabulate import tabulate
+
 
 def print_message_red(message):
-    print('\033[91m' + message + '\033[0m')
+    return ('\033[91m' + str(message) + '\033[0m')
 
 def print_message_green(message):
-    print('\033[92m' + message + '\033[0m')
+    return ('\033[92m' + str(message) + '\033[0m')
 
 def print_message_yellow(message):
-    print('\033[93m' + message + '\033[0m')
+    return ('\033[93m' + str(message) + '\033[0m')
 
 def suspiciousness(passed, failed, numberPassed, numberFailed):
     numerator = failed / numberFailed
@@ -31,6 +33,23 @@ def writeJson(result):
     with open('resultTarantula.json', 'w') as f:
         json.dump(result, f, indent=2)
     print("Successfully written the tarantula debugger details")
+
+def printJsonToTable(result,totalLine):
+    headers = ["Line Number", "Code", "Suspiciousness", "Rank"]
+    table = []
+    for i in range(totalLine):
+        row = []
+        row.append(result["coverage_matrix"][i]['_line_no'])
+        row.append(result["coverage_matrix"][i]['code'])
+        if result["coverage_matrix"][i]['suspiciousness'] == 0:
+            row.append(print_message_green(result["coverage_matrix"][i]['suspiciousness']))
+        elif result["coverage_matrix"][i]['suspiciousness'] <= 0.5:
+            row.append(print_message_yellow(result["coverage_matrix"][i]['suspiciousness']))
+        else:
+            row.append(print_message_red(result["coverage_matrix"][i]['suspiciousness']))
+        row.append(result["coverage_matrix"][i]['rank'])
+        table.append(row)
+    print(tabulate(table, headers, tablefmt="grid"))
 def start():
     result = getJson()
     totalLine = countLines(result)
@@ -60,6 +79,6 @@ def start():
         else:
             result["coverage_matrix"][i]['rank'] = rank.index(result["coverage_matrix"][i]['suspiciousness']) + 1
     writeJson(result)
+    printJsonToTable(result,totalLine)
 if __name__ == "__main__":
-    start()    
-    
+    start()
