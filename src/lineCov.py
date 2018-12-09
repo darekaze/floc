@@ -41,8 +41,15 @@ def start(modName, funcName, testcases):
     global current
     module = __import__('tmods.{}'.format(modName))
     func = getattr(getattr(module, modName), funcName)
-    with open(testcases) as json_data:
-        tests = json.load(json_data)
+    try:
+        with open(testcases) as json_data:
+            tests = json.load(json_data)
+    except FileNotFoundError:
+        print(
+            'Error: Could not find {}.json in /testCases'.format(testcases),
+            '\n..Abort..'
+        )
+        sys.exit(1)
 
     for test in tests:
         current = tuple(test['input'])
@@ -59,6 +66,7 @@ def start(modName, funcName, testcases):
     makeCovMatrix(res, totalLine)
     with open('result.json', 'w') as f:
         json.dump(res, f, indent=2)
+    print('Done! The Coverage Matrix Data is outputted to result.json')
 
 
 if __name__ == '__main__':
