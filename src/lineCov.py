@@ -19,21 +19,27 @@ def initCovMatrix(res, modName):
             res.append({
                 '_line_no': i+1,
                 'code': line,
+                'n_cover': [0, 0],
+                'n_uncover': [0, 0],
                 'coverage': [],
-                'fl': {}
+                # 'fl': {}
             })
     return i + 1
 
 
 def makeCovMatrix(res, totalLine):
     for t in testCovLines.values():
+        r = t['result']
         for i in range(totalLine):
             stat = 'O'
             if i+1 in t['coverlines']:
-                if t['result'] == 0:
+                if r == 0:
                     stat = 'P'
                 else:
                     stat = 'F'
+                res[i]['n_cover'][r] += 1
+            else:
+                res[i]['n_uncover'][r] += 1
             res[i]['coverage'].append(stat)
 
 
@@ -61,23 +67,24 @@ def start(modName, funcName, testcases):
         )
         sys.exit(2)
 
-    pf = [0, 0]
+    totalPF = [0, 0]
     for test in tests:
         current = tuple(test['input'])
-        testCovLines[current] = {'coverlines': set()}
+        if current not in testCovLines:
+            testCovLines[current] = {'coverlines': set()}
 
-        sys.settrace(traceLine)
-        output = func(test['input'])
-        sys.settrace(None)
+            sys.settrace(traceLine)
+            output = func(test['input'])
+            sys.settrace(None)
 
-        temp = int(not(output == test['result']))
-        pf[temp] += 1
-        testCovLines[current]['result'] = temp
+            temp = int(not(output == test['result']))
+            totalPF[temp] += 1
+            testCovLines[current]['result'] = temp
 
     res = []
     totalLine = initCovMatrix(res, modName)
     makeCovMatrix(res, totalLine)
-    outputCovMatrix(res, pf)
+    outputCovMatrix(res, totalPF)
     print('Done! The Coverage Matrix Data is outputted to result.json')
 
 
