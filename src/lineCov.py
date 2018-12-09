@@ -37,6 +37,16 @@ def makeCovMatrix(res, totalLine):
             res[i]['coverage'].append(stat)
 
 
+def outputCovMatrix(res, pf):
+    resJson = {
+        'total_passes': pf[0],
+        'total_fails': pf[1],
+        'coverage_matrix': res
+    }
+    with open('result.json', 'w') as f:
+        json.dump(resJson, f, indent=2)
+
+
 def start(modName, funcName, testcases):
     global current
     module = __import__('tmods.{}'.format(modName))
@@ -49,8 +59,9 @@ def start(modName, funcName, testcases):
             'Error: Could not find {}.json in /testCases'.format(testcases),
             '\n..Abort..'
         )
-        sys.exit(1)
+        sys.exit(2)
 
+    pf = [0, 0]
     for test in tests:
         current = tuple(test['input'])
         testCovLines[current] = {'coverlines': set()}
@@ -59,13 +70,14 @@ def start(modName, funcName, testcases):
         output = func(test['input'])
         sys.settrace(None)
 
-        testCovLines[current]['result'] = int(not(output == test['result']))
+        temp = int(not(output == test['result']))
+        pf[temp] += 1
+        testCovLines[current]['result'] = temp
 
     res = []
     totalLine = initCovMatrix(res, modName)
     makeCovMatrix(res, totalLine)
-    with open('result.json', 'w') as f:
-        json.dump(res, f, indent=2)
+    outputCovMatrix(res, pf)
     print('Done! The Coverage Matrix Data is outputted to result.json')
 
 
