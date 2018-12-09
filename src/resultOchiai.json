@@ -45,7 +45,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -91,7 +91,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -137,7 +137,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -183,7 +183,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -229,7 +229,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -275,7 +275,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -321,7 +321,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -367,7 +367,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -413,7 +413,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -459,7 +459,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -505,7 +505,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -551,7 +551,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -597,7 +597,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 4.0,
+      "suspiciousness": 0.3713906763541037,
       "rank": 28
     },
     {
@@ -643,7 +643,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 4.0,
+      "suspiciousness": 0.3713906763541037,
       "rank": 28
     },
     {
@@ -689,7 +689,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -735,7 +735,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 1.0,
+      "suspiciousness": 0.18569533817705186,
       "rank": 30
     },
     {
@@ -781,7 +781,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -827,7 +827,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -873,7 +873,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -919,7 +919,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -965,7 +965,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1011,7 +1011,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -1057,7 +1057,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -1103,7 +1103,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -1149,7 +1149,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1195,7 +1195,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1241,7 +1241,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1287,7 +1287,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1333,7 +1333,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1379,7 +1379,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1425,7 +1425,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1471,7 +1471,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1517,7 +1517,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -1563,7 +1563,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1609,7 +1609,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1655,7 +1655,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1701,7 +1701,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1747,7 +1747,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -1793,7 +1793,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1839,7 +1839,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -1885,7 +1885,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -1931,7 +1931,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -1977,7 +1977,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -2023,7 +2023,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -2069,7 +2069,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": 0,
       "rank": 49
     },
     {
@@ -2115,7 +2115,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -2161,7 +2161,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -2207,7 +2207,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     },
     {
@@ -2253,7 +2253,7 @@
         "F",
         "F"
       ],
-      "suspiciousness": 28.5,
+      "suspiciousness": 0.9831920802501751,
       "rank": 1
     }
   ]

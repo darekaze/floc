@@ -1,2 +1,5 @@
 def op2(v):
-    return float(v['Ncf'] - (v['Ncs'] / (v['Ns'] + 1)))
+    Ncf = float(v['Ncf'])
+    Ncs = float(v['Ncs'])
+    Ns = float(v['Ns'])
+    return Ncf - (Ncs / (Ns + 1))
