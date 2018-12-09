@@ -1,7 +1,6 @@
 import sys
 import argparse
 import json
-import tarantula as ttl
 current = []
 testCovLines = {}
 
@@ -22,7 +21,6 @@ def initCovMatrix(res, modName):
                 'n_uncover': [0, 0],
                 'coverage': [],
                 # 'fl': {}
-                'suspiciousness': 0
             })
     return i + 1
 
@@ -44,11 +42,7 @@ def makeCovMatrix(res, totalLine, passed, failed, totalPF):
             else:
                 res[i]['n_uncover'][r] += 1
             res[i]['coverage'].append(stat)
-    #Tarantula
-    for i in range(totalLine):
-        if passed[i] > 0 or failed[i] > 0:
-            lineSuspiciousness = ttl.suspiciousness(passed[i], failed[i], totalPF[0], totalPF[1])
-            res[i]['suspiciousness'] = lineSuspiciousness
+    
 
 
 def outputCovMatrix(res, pf):
@@ -65,9 +59,7 @@ def start(modName, funcName, testcases):
     global current
     res = []
     totalLine = initCovMatrix(res, modName)
-    #For Tarantula
-    passed = [0  for i in range(totalLine)]
-    failed = [0  for i in range(totalLine)]
+    
     
     module = __import__('tmods.{}'.format(modName))
     func = getattr(getattr(module, modName), funcName)
@@ -94,7 +86,7 @@ def start(modName, funcName, testcases):
             temp = int(not(output == test['result']))
             totalPF[temp] += 1
             testCovLines[current]['result'] = temp
-    makeCovMatrix(res, totalLine, passed, failed, totalPF)
+    makeCovMatrix(res, totalLine)
     outputCovMatrix(res, totalPF)
     print('Done! The Coverage Matrix Data is outputted to result.json')
 
