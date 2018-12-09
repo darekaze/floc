@@ -6,16 +6,21 @@ from tabulate import tabulate
 def print_message_red(message):
     return ('\033[91m' + str(message) + '\033[0m')
 
+
 def print_message_green(message):
     return ('\033[92m' + str(message) + '\033[0m')
 
+
 def print_message_yellow(message):
     return ('\033[93m' + str(message) + '\033[0m')
+
 
 def suspiciousness(passed, failed, numberPassed, numberFailed):
     numerator = failed / numberFailed
     denominator = passed / numberPassed + numerator
     return numerator / denominator
+
+
 def getJson():
     try:
         with open('result.json') as json_data:
@@ -26,13 +31,17 @@ def getJson():
             'Error: Could not open JSON result from coverage'
         )
     sys.exit(2)
+
+
 def countLines(result):
     return len(result['coverage_matrix'])
+
 
 def writeJson(result):
     with open('resultTarantula.json', 'w') as f:
         json.dump(result, f, indent=2)
     print("Successfully written the tarantula debugger details")
+
 
 def printJsonToTable(result,totalLine):
     headers = ["Line Number", "Code", "Suspiciousness", "Rank"]
@@ -50,6 +59,8 @@ def printJsonToTable(result,totalLine):
         row.append(result["coverage_matrix"][i]['rank'])
         table.append(row)
     print(tabulate(table, headers, tablefmt="grid"))
+
+
 def start():
     result = getJson()
     totalLine = countLines(result)
@@ -77,8 +88,10 @@ def start():
         if result["coverage_matrix"][i]['suspiciousness'] == 0:
             result["coverage_matrix"][i]['rank'] = len(rank)
         else:
-            result["coverage_matrix"][i]['rank'] = rank.index(result["coverage_matrix"][i]['suspiciousness']) + 1
+            result["coverage_matrix"][i]['rank'] = rank.index(result['coverage_matrix'][i]['suspiciousness']) + 1
     writeJson(result)
-    printJsonToTable(result,totalLine)
+    printJsonToTable(result, totalLine)
+
+
 if __name__ == "__main__":
     start()
