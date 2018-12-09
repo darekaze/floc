@@ -89,8 +89,8 @@
         "P",
         "P"
       ],
-      "suspiciousness": 0.5,
-      "rank": 4
+      "suspiciousness": 0,
+      "rank": 14
     },
     {
       "_line_no": 3,
@@ -134,8 +134,8 @@
         "P",
         "P"
       ],
-      "suspiciousness": 0.5,
-      "rank": 4
+      "suspiciousness": 0,
+      "rank": 14
     },
     {
       "_line_no": 4,
@@ -179,8 +179,8 @@
         "P",
         "P"
       ],
-      "suspiciousness": 0.5,
-      "rank": 4
+      "suspiciousness": 0,
+      "rank": 14
     },
     {
       "_line_no": 5,
@@ -224,7 +224,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.7368421052631579,
+      "suspiciousness": 0.03502324073073182,
       "rank": 3
     },
     {
@@ -269,8 +269,8 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
-      "rank": 14
+      "suspiciousness": -0.008323424494649227,
+      "rank": 12
     },
     {
       "_line_no": 7,
@@ -314,7 +314,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.9032258064516129,
+      "suspiciousness": 0.18579072532699165,
       "rank": 2
     },
     {
@@ -359,7 +359,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.9333333333333333,
+      "suspiciousness": 0.2679349980182323,
       "rank": 1
     },
     {
@@ -449,7 +449,7 @@
         "P",
         "P"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": -0.02140309155766944,
       "rank": 14
     },
     {
@@ -494,8 +494,8 @@
         "P",
         "O"
       ],
-      "suspiciousness": 0.0,
-      "rank": 14
+      "suspiciousness": -0.005945303210463734,
+      "rank": 10
     },
     {
       "_line_no": 12,
@@ -539,8 +539,8 @@
         "O",
         "P"
       ],
-      "suspiciousness": 0.0,
-      "rank": 14
+      "suspiciousness": -0.015457788347205707,
+      "rank": 13
     },
     {
       "_line_no": 13,
@@ -584,8 +584,8 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
-      "rank": 14
+      "suspiciousness": -0.007134363852556481,
+      "rank": 11
     },
     {
       "_line_no": 14,
@@ -629,8 +629,8 @@
         "P",
         "P"
       ],
-      "suspiciousness": 0.5,
-      "rank": 4
+      "suspiciousness": 0,
+      "rank": 14
     }
   ]
 }
