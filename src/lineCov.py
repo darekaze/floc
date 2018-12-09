@@ -1,10 +1,9 @@
 import sys
 import argparse
 import json
-
+import tarantula as ttl
 current = []
 testCovLines = {}
-
 
 def traceLine(frame, event, arg):
     if event == 'line':
@@ -23,11 +22,12 @@ def initCovMatrix(res, modName):
                 'n_uncover': [0, 0],
                 'coverage': [],
                 # 'fl': {}
+                'suspiciousness': 0
             })
     return i + 1
 
 
-def makeCovMatrix(res, totalLine):
+def makeCovMatrix(res, totalLine, passed, failed, totalPF):
     for t in testCovLines.values():
         r = t['result']
         for i in range(totalLine):
@@ -35,12 +35,20 @@ def makeCovMatrix(res, totalLine):
             if i+1 in t['coverlines']:
                 if r == 0:
                     stat = 'P'
+                    passed[i] += 1
                 else:
                     stat = 'F'
+                    failed[i] += 1
+                                
                 res[i]['n_cover'][r] += 1
             else:
                 res[i]['n_uncover'][r] += 1
             res[i]['coverage'].append(stat)
+    #Tarantula
+    for i in range(totalLine):
+        if passed[i] > 0 or failed[i] > 0:
+            lineSuspiciousness = ttl.suspiciousness(passed[i], failed[i], totalPF[0], totalPF[1])
+            res[i]['suspiciousness'] = lineSuspiciousness
 
 
 def outputCovMatrix(res, pf):
@@ -55,6 +63,12 @@ def outputCovMatrix(res, pf):
 
 def start(modName, funcName, testcases):
     global current
+    res = []
+    totalLine = initCovMatrix(res, modName)
+    #For Tarantula
+    passed = [0  for i in range(totalLine)]
+    failed = [0  for i in range(totalLine)]
+    
     module = __import__('tmods.{}'.format(modName))
     func = getattr(getattr(module, modName), funcName)
     try:
@@ -80,10 +94,7 @@ def start(modName, funcName, testcases):
             temp = int(not(output == test['result']))
             totalPF[temp] += 1
             testCovLines[current]['result'] = temp
-
-    res = []
-    totalLine = initCovMatrix(res, modName)
-    makeCovMatrix(res, totalLine)
+    makeCovMatrix(res, totalLine, passed, failed, totalPF)
     outputCovMatrix(res, totalPF)
     print('Done! The Coverage Matrix Data is outputted to result.json')
 
