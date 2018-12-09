@@ -1,6 +1,5 @@
 def dstar(v):
-    star = 8
-    numerator = float(v['Ncf'] ^ star)
+    numerator = float(v['Ncf'] * v['Ncf'])
     denominator = float(v['Nuf'] + v['Ncs'])
     try:
         score = numerator / denominator

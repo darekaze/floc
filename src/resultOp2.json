@@ -89,7 +89,7 @@
         "P",
         "P"
       ],
-      "suspiciousness": 0.03571428571428571,
+      "suspiciousness": 0.03448275862068961,
       "rank": 4
     },
     {
@@ -134,7 +134,7 @@
         "P",
         "P"
       ],
-      "suspiciousness": 0.03571428571428571,
+      "suspiciousness": 0.03448275862068961,
       "rank": 4
     },
     {
@@ -179,7 +179,7 @@
         "P",
         "P"
       ],
-      "suspiciousness": 0.03571428571428571,
+      "suspiciousness": 0.03448275862068961,
       "rank": 4
     },
     {
@@ -224,7 +224,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.1,
+      "suspiciousness": 0.6551724137931034,
       "rank": 3
     },
     {
@@ -269,8 +269,8 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
-      "rank": 14
+      "suspiciousness": -0.2413793103448276,
+      "rank": 12
     },
     {
       "_line_no": 7,
@@ -314,7 +314,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.3333333333333333,
+      "suspiciousness": 0.896551724137931,
       "rank": 2
     },
     {
@@ -359,7 +359,7 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.5,
+      "suspiciousness": 0.9310344827586207,
       "rank": 1
     },
     {
@@ -449,7 +449,7 @@
         "P",
         "P"
       ],
-      "suspiciousness": 0.0,
+      "suspiciousness": -0.6206896551724138,
       "rank": 14
     },
     {
@@ -494,8 +494,8 @@
         "P",
         "O"
       ],
-      "suspiciousness": 0.0,
-      "rank": 14
+      "suspiciousness": -0.1724137931034483,
+      "rank": 10
     },
     {
       "_line_no": 12,
@@ -539,8 +539,8 @@
         "O",
         "P"
       ],
-      "suspiciousness": 0.0,
-      "rank": 14
+      "suspiciousness": -0.4482758620689655,
+      "rank": 13
     },
     {
       "_line_no": 13,
@@ -584,8 +584,8 @@
         "O",
         "O"
       ],
-      "suspiciousness": 0.0,
-      "rank": 14
+      "suspiciousness": -0.20689655172413793,
+      "rank": 11
     },
     {
       "_line_no": 14,
@@ -629,7 +629,7 @@
         "P",
         "P"
       ],
-      "suspiciousness": 0.03571428571428571,
+      "suspiciousness": 0.03448275862068961,
       "rank": 4
     }
   ]
