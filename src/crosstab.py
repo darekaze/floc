@@ -46,7 +46,6 @@ def start():
 
         #calculate contingency coefficient
         M = X_square/N
-        # print(Ncs, Ncf)
 
         # calculate phi
         if Ncs == 0 and Ncf == 0:
@@ -59,12 +58,7 @@ def start():
             phi = (Ncf*Ns)/(Nf*Ncs)
 
         # calculate zeta, the suspiciousness of a statement
-        if phi>1:
-            Z = M
-        elif phi==1:
-            Z = 0
-        elif phi<1:
-            Z = -M
+        Z = M if phi>1 else -M if phi<1 else 0
 
         line['suspiciousness'] = Z
         rank.append(Z)
