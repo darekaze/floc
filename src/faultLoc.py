@@ -1,3 +1,4 @@
+import os
 import sys
 import argparse
 import json
@@ -24,15 +25,19 @@ def print_message_yellow(message):
     return ('\033[93m' + str(message) + '\033[0m')
 
 
-def writeJson(result, modName):
-    with open('result{}.json'.format(modName.capitalize()), 'w') as f:
+def writeJson(result, tech, dir='testResults'):
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+
+    fileName = '{}/{}_{}.json'.format(dir, result['name'], tech)
+    with open(fileName, 'w') as f:
         json.dump(result, f, indent=2)
-    print('Successfully written the {} debugger results'.format(modName))
+    print('\n\nResult is outputted to {}'.format(fileName))
 
 
-def readJson():
+def readJson(resultfile):
     try:
-        with open('result.json') as json_data:
+        with open(resultfile) as json_data:
             return json.load(json_data)
     except FileNotFoundError:
         print(
@@ -65,7 +70,7 @@ def printTable(cov, tech):
 def start(tech, resultfile):
     module = __import__('_{}'.format(tech))
     getSuspiciousness = getattr(module, tech)
-    results = readJson()
+    results = readJson(resultfile)
 
     rank = []
     rank_global = {}
@@ -116,7 +121,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--src',
         type=str,
-        default='result.json',
+        default='result_matrix.json',
         help='Name of the coverage matrix .json file'
     )
     args = parser.parse_args()

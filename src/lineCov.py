@@ -43,13 +43,14 @@ def makeCovMatrix(res, totalLine):
             res[i]['coverage'].append(stat)
 
 
-def outputCovMatrix(res, pf):
+def outputCovMatrix(res, modName, pf):
     resJson = {
+        'name': modName,
         'total_passes': pf[0],
         'total_fails': pf[1],
         'coverage_matrix': res
     }
-    with open('result.json', 'w') as f:
+    with open('result_matrix.json', 'w') as f:
         json.dump(resJson, f, indent=2)
 
 
@@ -84,7 +85,7 @@ def start(modName, funcName, testcases):
     res = []
     totalLine = initCovMatrix(res, modName)
     makeCovMatrix(res, totalLine)
-    outputCovMatrix(res, totalPF)
+    outputCovMatrix(res, modName, totalPF)
     print('Done! The Coverage Matrix Data is outputted to result.json')
 
 
