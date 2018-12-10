@@ -43,7 +43,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 14
     },
     {
       "_line_no": 2,
@@ -86,7 +88,9 @@
         "P",
         "P",
         "P"
-      ]
+      ],
+      "suspiciousness": 0.18569533817705186,
+      "rank": 4
     },
     {
       "_line_no": 3,
@@ -129,7 +133,9 @@
         "P",
         "P",
         "P"
-      ]
+      ],
+      "suspiciousness": 0.18569533817705186,
+      "rank": 4
     },
     {
       "_line_no": 4,
@@ -172,7 +178,9 @@
         "P",
         "P",
         "P"
-      ]
+      ],
+      "suspiciousness": 0.18569533817705186,
+      "rank": 4
     },
     {
       "_line_no": 5,
@@ -215,7 +223,9 @@
         "P",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0.30151134457776363,
+      "rank": 3
     },
     {
       "_line_no": 6,
@@ -258,7 +268,9 @@
         "P",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0.0,
+      "rank": 14
     },
     {
       "_line_no": 7,
@@ -301,7 +313,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 2
     },
     {
       "_line_no": 8,
@@ -344,7 +358,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0.5773502691896258,
+      "rank": 1
     },
     {
       "_line_no": 9,
@@ -387,7 +403,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 14
     },
     {
       "_line_no": 10,
@@ -430,7 +448,9 @@
         "O",
         "P",
         "P"
-      ]
+      ],
+      "suspiciousness": 0.0,
+      "rank": 14
     },
     {
       "_line_no": 11,
@@ -473,7 +493,9 @@
         "O",
         "P",
         "O"
-      ]
+      ],
+      "suspiciousness": 0.0,
+      "rank": 14
     },
     {
       "_line_no": 12,
@@ -516,7 +538,9 @@
         "O",
         "O",
         "P"
-      ]
+      ],
+      "suspiciousness": 0.0,
+      "rank": 14
     },
     {
       "_line_no": 13,
@@ -559,7 +583,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0.0,
+      "rank": 14
     },
     {
       "_line_no": 14,
@@ -602,7 +628,9 @@
         "P",
         "P",
         "P"
-      ]
+      ],
+      "suspiciousness": 0.18569533817705186,
+      "rank": 4
     }
   ]
 }

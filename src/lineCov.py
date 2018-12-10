@@ -115,4 +115,3 @@ if __name__ == '__main__':
         args.func,
         '../testCases/{}'.format(args.src)
     )
-    
