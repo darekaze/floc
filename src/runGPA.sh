@@ -1,5 +1,10 @@
-python ./tc_generator/grade.gen.py
-python lineCov.py gpa_b1 gpa grade.json
-python faultLoc.py tarantula
-python faultLoc.py crosstab
-python faultLoc.py dstar
+NUM=$1
+
+if [ -n "$NUM" ]; then
+  python lineCov.py gpa_b$NUM gpa grade.json
+  python faultLoc.py tarantula
+  python faultLoc.py crosstab
+  python faultLoc.py dstar
+else
+  echo "Please enter the version number for GPA.."
+fi
