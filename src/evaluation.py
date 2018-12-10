@@ -3,6 +3,7 @@ import argparse
 import json
 import os
 import pandas as pd
+import matplotlib.pyplot as plt
 debuggers = ['tarantula','crosstab','barinel']
 Threshold = {
     'tarantula': 0.7,
@@ -43,7 +44,10 @@ def start():
         metric = dangerStatement / lineNumber
         dfTemp[debugger].append(metric)
     df = pd.DataFrame(dfTemp)
-    df.plot()
+    
+    plt.figure()
+    df.plot(subplots=True, figsize=(15,15))
+    df.plot(figsize=(15,15))
     print(df)
     
         
