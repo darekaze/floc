@@ -6,5 +6,5 @@ if [ -n "$NUM" ]; then
   python faultLoc.py crosstab
   python faultLoc.py dstar
 else
-  echo "Please enter the version number for GPA.."
+  echo "Please enter a version number (1-12).."
 fi
