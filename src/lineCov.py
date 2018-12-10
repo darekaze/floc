@@ -114,5 +114,5 @@ if __name__ == '__main__':
     start(
         args.module,
         args.func,
-        '../testCases/{}'.format(args.src)
+        './testCases/{}'.format(args.src)
     )

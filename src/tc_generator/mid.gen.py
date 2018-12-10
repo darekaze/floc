@@ -33,7 +33,7 @@ def generate(cases, r, fileName='mid', dir='testCases'):
             li['result'] = mid(li['input'])
             outputs.append(li)
         json.dump(outputs, f, indent=2)
-    print('Done!\n')
+    print('Done! Testcases successfully generated!\n')
 
 
 if __name__ == '__main__':

@@ -44,7 +44,7 @@ def generate(cases, r, fileName='sorting', dir='testCases'):
             li['result'] = gpa(li['input'])
             outputs.append(li)
         json.dump(outputs, f, indent=2)
-    print('Done!\n')
+    print('Done! Testcases successfully generated!\n')
 
 
 if __name__ == '__main__':
