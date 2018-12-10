@@ -1,5 +1,4 @@
 import sys
-import argparse
 import json
 from tabulate import tabulate
 
@@ -8,11 +7,34 @@ def writeJson(results):
         json.dump(results, f, indent=2)
     print("Successfully written the crosstab debugger details\n")
 
+def print_message_red(message):
+    return ('\033[91m' + str(message) + '\033[0m')
+
+def print_message_green(message):
+    return ('\033[92m' + str(message) + '\033[0m')
+
+def print_message_yellow(message):
+    return ('\033[93m' + str(message) + '\033[0m')
+
 def printTable(results):
     print('line no\tsuspiciousness\trank')
     for line in results['coverage_matrix']:
         print('%d\t%f\t%d' % (line['_line_no'],line['suspiciousness'],line['rank']))
-
+    headers = ["Line Number", "Code", "Suspiciousness", "Rank"]
+    table=[]
+    for line in results['coverage_matrix']:
+        row=[]
+        row.append(line['_line_no'])
+        row.append(line['code'])
+        if line['suspiciousness'] < 0:
+            row.append(print_message_green(line['suspiciousness']))
+        elif line['suspiciousness'] == 0:
+            row.append(print_message_yellow(line['suspiciousness']))
+        else:
+            row.append(print_message_red(line['suspiciousness']))
+        row.append(line['rank'])
+        table.append(row)
+    print(tabulate(table, headers, tablefmt="grid"))
 def start():
     rank = []
     try:
