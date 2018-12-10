@@ -33,7 +33,7 @@ def readJson():
         sys.exit(2)
 
 
-def printTable(cov,tech):
+def printTable(cov, tech):
     headers = ["Line Number", "Code", "Suspiciousness", "Rank"]
     table = []
 
@@ -44,7 +44,7 @@ def printTable(cov,tech):
 
         if r['suspiciousness'] <= 0:
             row.append(print_message_green(r['suspiciousness']))
-        elif r['suspiciousness'] <= (0.5 if tech=="tarantula" else 0.1):
+        elif r['suspiciousness'] <= (0.5 if tech == "tarantula" else 0.1):
             row.append(print_message_yellow(r['suspiciousness']))
         else:
             row.append(print_message_red(r['suspiciousness']))
@@ -59,7 +59,7 @@ def start(tech, resultfile):
     results = readJson()
 
     rank = []
-    rank_global = dict()
+    rank_global = {}
     for line in results['coverage_matrix']:
         defins = {
             'N': results['total_passes'] + results['total_fails'],
@@ -81,17 +81,17 @@ def start(tech, resultfile):
     rank.sort(reverse=True)
     for r in rank:
         if r in rank_global:
-            rank_global[r]+=1
+            rank_global[r] += 1
         else:
-            rank_global[r]=1
+            rank_global[r] = 1
     for line in results['coverage_matrix']:
-        rank_no=0
+        rank_no = 0
         for d in rank_global:
             if d >= line['suspiciousness']:
                 rank_no += rank_global[d]
         line['rank'] = rank_no
     writeJson(results, tech)
-    printTable(results['coverage_matrix'],tech)
+    printTable(results['coverage_matrix'], tech)
 
 
 if __name__ == '__main__':

@@ -29,11 +29,6 @@ def crosstab(v):
         phi = (v['Ncf'] * v['Ns']) / (v['Nf'] * v['Ncs'])
 
     # calculate zeta, the suspiciousness of a statement
-    if phi > 1:
-        Z = M
-    elif phi == 1:
-        Z = 0
-    elif phi < 1:
-        Z = -M
+    Z = M if phi > 1 else -M if phi < 1 else 0
 
     return Z
