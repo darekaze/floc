@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# custom
+src/testCases/
+src/testResults/
+src/result_matrix.json
