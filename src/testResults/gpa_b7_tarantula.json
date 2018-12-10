@@ -1,5 +1,5 @@
 {
-  "name": "gpa_b9",
+  "name": "gpa_b7",
   "total_passes": 1,
   "total_fails": 49,
   "coverage_matrix": [
@@ -65,7 +65,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 23
     },
     {
       "_line_no": 2,
@@ -129,7 +131,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 14
     },
     {
       "_line_no": 3,
@@ -193,7 +197,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 23
     },
     {
       "_line_no": 4,
@@ -257,7 +263,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 14
     },
     {
       "_line_no": 5,
@@ -321,7 +329,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 14
     },
     {
       "_line_no": 6,
@@ -385,7 +395,9 @@
         "O",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 1.0,
+      "rank": 5
     },
     {
       "_line_no": 7,
@@ -449,7 +461,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 14
     },
     {
       "_line_no": 8,
@@ -513,7 +527,9 @@
         "O",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.3194444444444444,
+      "rank": 19
     },
     {
       "_line_no": 9,
@@ -577,7 +593,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 14
     },
     {
       "_line_no": 10,
@@ -641,7 +659,9 @@
         "F",
         "O",
         "F"
-      ]
+      ],
+      "suspiciousness": 1.0,
+      "rank": 5
     },
     {
       "_line_no": 11,
@@ -705,7 +725,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 14
     },
     {
       "_line_no": 12,
@@ -769,7 +791,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0.3194444444444444,
+      "rank": 19
     },
     {
       "_line_no": 13,
@@ -833,7 +857,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.4895833333333333,
+      "rank": 15
     },
     {
       "_line_no": 14,
@@ -897,7 +923,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 1.0,
+      "rank": 5
     },
     {
       "_line_no": 15,
@@ -961,7 +989,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.4787234042553192,
+      "rank": 16
     },
     {
       "_line_no": 16,
@@ -1025,7 +1055,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 1.0,
+      "rank": 5
     },
     {
       "_line_no": 17,
@@ -1089,11 +1121,13 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.449438202247191,
+      "rank": 17
     },
     {
       "_line_no": 18,
-      "code": "            d += 2      # bug\n",
+      "code": "            d += 1\n",
       "n_cover": [
         0,
         25
@@ -1153,7 +1187,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 1.0,
+      "rank": 5
     },
     {
       "_line_no": 19,
@@ -1217,7 +1253,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 23
     },
     {
       "_line_no": 20,
@@ -1281,7 +1319,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 14
     },
     {
       "_line_no": 21,
@@ -1345,7 +1385,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 14
     },
     {
       "_line_no": 22,
@@ -1409,7 +1451,9 @@
         "O",
         "O",
         "O"
-      ]
+      ],
+      "suspiciousness": 0,
+      "rank": 23
     },
     {
       "_line_no": 23,
@@ -1473,7 +1517,9 @@
         "F",
         "F",
         "F"
-      ]
+      ],
+      "suspiciousness": 0.5,
+      "rank": 14
     }
   ]
 }
