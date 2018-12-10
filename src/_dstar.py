@@ -1,11 +1,11 @@
-import math
+from math import inf, pow
 
 
-def dstar(v):
-    numerator = float(v['Ncf'] * v['Ncf'])
+def dstar(v, star=2):
+    numerator = pow(v['Ncf'], star)
     denominator = float(v['Nuf'] + v['Ncs'])
     try:
         score = numerator / denominator
     except ZeroDivisionError:
-        score = math.inf
+        score = inf
     return score
