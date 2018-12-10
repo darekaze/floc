@@ -19,7 +19,7 @@ def print_message_yellow(message):
 def writeJson(result, modName):
     with open('result{}.json'.format(modName.capitalize()), 'w') as f:
         json.dump(result, f, indent=2)
-    print("Successfully written the D* debugger details")
+    print('Successfully written the {} debugger results'.format(modName))
 
 
 def readJson():
@@ -42,7 +42,7 @@ def printTable(cov):
         row.append(r['_line_no'])
         row.append(r['code'])
 
-        if r['suspiciousness'] == 0:
+        if r['suspiciousness'] <= 0:
             row.append(print_message_green(r['suspiciousness']))
         elif r['suspiciousness'] <= 0.5:
             row.append(print_message_yellow(r['suspiciousness']))
@@ -79,7 +79,7 @@ def start(tech, resultfile):
 
     rank.sort(reverse=True)
     for line in results['coverage_matrix']:
-        if line['suspiciousness'] == 0:
+        if line['suspiciousness'] <= 0:
             line['rank'] = len(rank)
         else:
             line['rank'] = rank.index(line['suspiciousness']) + 1
