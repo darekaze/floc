@@ -1,11 +1,17 @@
 import sys
 import argparse
 import json
+from tabulate import tabulate
 
-def writeJson(result):
+def writeJson(results):
     with open('resultCrosstab.json', 'w') as f:
-        json.dump(result, f, indent=2)
-    print("Successfully written the crosstab debugger details")
+        json.dump(results, f, indent=2)
+    print("Successfully written the crosstab debugger details\n")
+
+def printTable(results):
+    print('line no\tsuspiciousness\trank')
+    for line in results['coverage_matrix']:
+        print('%d\t%f\t%d' % (line['_line_no'],line['suspiciousness'],line['rank']))
 
 def start():
     rank = []
@@ -69,6 +75,7 @@ def start():
         else:
             line['rank'] = rank.index(line['suspiciousness']) + 1
     writeJson(results)
+    printTable(results)
 
 if __name__ == '__main__':
     start()
