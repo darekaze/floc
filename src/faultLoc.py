@@ -19,7 +19,7 @@ def print_message_yellow(message):
 def writeJson(result, modName):
     with open('result{}.json'.format(modName.capitalize()), 'w') as f:
         json.dump(result, f, indent=2)
-    print("Successfully written the D* debugger details")
+    print('Successfully written the {} debugger results'.format(modName))
 
 
 def readJson():
