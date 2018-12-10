@@ -90,7 +90,7 @@
         "P"
       ],
       "suspiciousness": 0.18569533817705186,
-      "rank": 4
+      "rank": 7
     },
     {
       "_line_no": 3,
@@ -135,7 +135,7 @@
         "P"
       ],
       "suspiciousness": 0.18569533817705186,
-      "rank": 4
+      "rank": 7
     },
     {
       "_line_no": 4,
@@ -180,7 +180,7 @@
         "P"
       ],
       "suspiciousness": 0.18569533817705186,
-      "rank": 4
+      "rank": 7
     },
     {
       "_line_no": 5,
@@ -630,7 +630,7 @@
         "P"
       ],
       "suspiciousness": 0.18569533817705186,
-      "rank": 4
+      "rank": 7
     }
   ]
 }

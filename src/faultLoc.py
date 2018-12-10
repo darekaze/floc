@@ -3,6 +3,11 @@ import argparse
 import json
 from tabulate import tabulate
 
+colorSpec = {
+    'tarantula': 0.5,
+    'ochiai': 0.3,
+}
+
 
 def print_message_red(message):
     return ('\033[91m' + str(message) + '\033[0m')
@@ -42,9 +47,10 @@ def printTable(cov, tech):
         row.append(r['_line_no'])
         row.append(r['code'])
 
+        cof = colorSpec[tech] if tech in colorSpec else 0.1
         if r['suspiciousness'] <= 0:
             row.append(print_message_green(r['suspiciousness']))
-        elif r['suspiciousness'] <= (0.5 if tech == "tarantula" else 0.1):
+        elif r['suspiciousness'] <= cof:
             row.append(print_message_yellow(r['suspiciousness']))
         else:
             row.append(print_message_red(r['suspiciousness']))
