@@ -16,7 +16,7 @@ gc = {
 }
 
 
-def generate(cases, r, fileName='sorting', dir='../testCases'):
+def generate(cases, r, fileName='sorting', dir='testCases'):
     if not os.path.exists(dir):
         os.makedirs(dir)
 
