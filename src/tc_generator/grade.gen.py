@@ -53,7 +53,7 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '-c', '--tc',
-        default=200,
+        default=100,
         type=int,
         help='Number of testcases'
     )
