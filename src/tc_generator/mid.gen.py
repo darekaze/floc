@@ -27,13 +27,13 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '-c', '--tc',
-        default=30,
+        default=100,
         type=int,
         help='Number of testcases'
     )
     parser.add_argument(
         '-r', '--range',
-        default=10,
+        default=20,
         type=int,
         help='The range for the list (e.g. 0~1000, default=1000)'
     )
