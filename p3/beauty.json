@@ -1,4 +1,5 @@
 {
+  "name": "mid_b1",
   "total_passes": 28,
   "total_fails": 1,
   "coverage_matrix": [
