@@ -2,22 +2,7 @@ import os
 import argparse
 import random
 import json
-
-
-def mid(li):
-    x, y, z = li
-    m = z
-    if (y < z):
-        if (x < y):
-            m = y
-        elif (x < z):
-            m = x
-    else:
-        if (x > y):
-            m = y
-        elif (x > z):
-            m = x
-    return m
+from statistics import median
 
 
 def generate(cases, r, fileName='mid', dir='testCases'):
@@ -30,7 +15,7 @@ def generate(cases, r, fileName='mid', dir='testCases'):
             li = {'input': []}
             for _ in range(3):
                 li['input'].append(random.randint(0, r))
-            li['result'] = mid(li['input'])
+            li['result'] = median(li['input'])
             outputs.append(li)
         json.dump(outputs, f, indent=2)
     print('Done! Testcases successfully generated!\n')

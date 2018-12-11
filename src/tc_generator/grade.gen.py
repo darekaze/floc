@@ -4,31 +4,16 @@ import random
 import json
 
 grade = ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D', 'F']
-
-
-def gpa(grades):
-    ap = a = bp = b = cp = c = d = 0
-
-    for grade in grades:
-        if grade == 'A+':
-            ap += 1
-        elif grade == 'A':
-            a += 1
-        elif grade == 'B+':
-            bp += 1
-        elif grade == 'B':
-            b += 1
-        elif grade == 'C+':
-            cp += 1
-        elif grade == 'C':
-            c += 1
-        elif grade == 'D':
-            d += 1
-
-    sum = float(ap * 4.5 + a * 4.0 + bp * 3.5 + b * 3.0
-                + cp * 2.5 + c * 2.0 + d * 1.0)
-
-    return sum / len(grades)
+gc = {
+    'A+': 4.5,
+    'A': 4.0,
+    'B+': 3.5,
+    'B': 3.0,
+    'C+': 2.5,
+    'C': 2.0,
+    'D': 1.0,
+    'F': 0.0
+}
 
 
 def generate(cases, r, fileName='sorting', dir='testCases'):
@@ -39,9 +24,12 @@ def generate(cases, r, fileName='sorting', dir='testCases'):
         outputs = []
         for _ in range(cases):
             li = {'input': []}
+            s = 0
             for _ in range(r):
-                li['input'].append(random.choice(grade))
-            li['result'] = gpa(li['input'])
+                temp = random.choice(grade)
+                li['input'].append(temp)
+                s += gc[temp]
+            li['result'] = float(s / len(li['input']))
             outputs.append(li)
         json.dump(outputs, f, indent=2)
     print('Done! Testcases successfully generated!\n')

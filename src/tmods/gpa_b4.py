@@ -3,7 +3,7 @@ def gpa(grades):
 
     for grade in grades:
         if grade == 'A+':
-            ap += 2     # bug
+            ap += 2
         elif grade == 'A':
             a += 1
         elif grade == 'B+':
@@ -15,7 +15,7 @@ def gpa(grades):
         elif grade == 'C':
             c += 1
         elif grade == 'D':
-            d += 2     # bug
+            d += 2
 
     sum = float(ap * 4.5 + a * 4.0 + bp * 3.5 + b * 3.0
                 + cp * 2.5 + c * 2.0 + d * 1.0)

@@ -5,7 +5,7 @@ def gpa(grades):
         if grade == 'A+':
             ap += 1
         elif grade == 'A':
-            a += 2      # bug
+            a += 2
         elif grade == 'B+':
             bp += 1
         elif grade == 'B':

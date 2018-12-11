@@ -5,7 +5,7 @@ def mid(li):
         if (x < y):
             m = y
         elif (x < z):
-            m = y   # bug
+            m = y
     else:
         if (x > y):
             m = y

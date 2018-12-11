@@ -3,7 +3,7 @@ def gpa(grades):
 
     for grade in grades:
         if grade == 'A+':
-            ap += 2     # bug
+            ap += 2
         elif grade == 'A':
             a += 1
         elif grade == 'B+':
