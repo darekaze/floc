@@ -9,7 +9,7 @@ colorLint = {
     'crosstab': 0.1,
     'dstar': 999999,
     'ochiai': 0.5,
-    'barinel': 0.85,
+    'barinel': 0.99,
 }
 
 
