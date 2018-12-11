@@ -86,7 +86,7 @@ def start(modName, funcName, testcases):
     totalLine = initCovMatrix(res, modName)
     makeCovMatrix(res, totalLine)
     outputCovMatrix(res, modName, totalPF)
-    print('Done! The Coverage Matrix Data is outputted to result.json')
+    print('Done! The Coverage Matrix Data is outputted to result_matrix.json')
 
 
 if __name__ == '__main__':
