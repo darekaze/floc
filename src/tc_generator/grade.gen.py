@@ -16,7 +16,7 @@ gc = {
 }
 
 
-def generate(cases, r, fileName='sorting', dir='testCases'):
+def generate(cases, r, fileName='sorting', dir='../testCases'):
     if not os.path.exists(dir):
         os.makedirs(dir)
 
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '-c', '--tc',
-        default=50,
+        default=100,
         type=int,
         help='Number of testcases'
     )
