@@ -20,7 +20,7 @@ def mid(li):
     return m
 
 
-def generate(cases, r, fileName='mid', dir='testCases'):
+def generate(cases, r, fileName='mid', dir='../testCases'):
     if not os.path.exists(dir):
         os.makedirs(dir)
 
