@@ -2,8 +2,14 @@
 
 A collection of self-implementation Fault Localization tools
 
+## Instruction
+
+To be added
+
 ## Contributors
 
-- Darwin [@DaRekaze](https://github.com/darekaze)
-- Reynold [@reynoldpolyu](https://github.com/reynoldpolyu)
-- Alison [@alisonsyxu](https://github.comalisonsyxu)
+[@DaRekaze](https://github.com/darekaze)
+
+[@reynoldpolyu](https://github.com/reynoldpolyu)
+
+[@alisonsyxu](https://github.comalisonsyxu)
