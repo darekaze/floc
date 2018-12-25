@@ -1,15 +1,17 @@
 import sys
-import argparse
 import json
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-debuggers = ['tarantula','crosstab','barinel']
+
+
+debuggers = ['tarantula', 'crosstab', 'barinel']
 Threshold = {
     'tarantula': 0.7,
     'crosstab': 0.0002,
     'barinel': 1,
 }
+
 
 def readJson(jsonFile):
     try:
@@ -22,13 +24,11 @@ def readJson(jsonFile):
         sys.exit(2)
 
 
-
 def start():
     directory = "testResults"
     directoryList = sorted(os.listdir(directory), key=lambda s: s[8:])
     dfTemp = {}
-    tempList = []
-    crosstab_threshold = 0
+
     # Initialize Dataframe
     for d in debuggers:
         dfTemp[d] = []
@@ -44,14 +44,12 @@ def start():
         metric = dangerStatement / lineNumber
         dfTemp[debugger].append(metric)
     df = pd.DataFrame(dfTemp)
-    
+
     plt.figure()
-    df.plot(subplots=True, figsize=(15,15))
-    df.plot(figsize=(15,15))
+    df.plot(subplots=True, figsize=(15, 15))
+    df.plot(figsize=(15, 15))
     print(df)
-    
-        
-    
+
 
 if __name__ == '__main__':
     start()
