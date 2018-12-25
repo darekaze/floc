@@ -1,6 +1,6 @@
-# fault
+# floc
 
-A collection of self-implementation Fault Localization tools
+A collection of self-implementation **f**ault **loc**alization tools
 
 ## Instruction
 
