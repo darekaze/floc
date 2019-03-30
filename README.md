@@ -4,8 +4,6 @@ A collection of self-implementation **f**ault **loc**alization tools
 
 ## Instruction
 
-> **TL;DR** Try run the bash files (`runGPA.sh`)
-
 1. Generate some random sample data generators:
 ```
 python3 tc_generator/grade.gen.py
@@ -20,6 +18,9 @@ python3 lineCov.py gpa_b3 gpa grade.json
 ```
 python3 faultLoc.py tarantula
 ```
+
+> **P.S.** There are some bash script that you can try to run after generating the sample data.
+> `runGPA.sh` & `runMid.sh`
 
 ## Commands
 
@@ -48,7 +49,7 @@ src     (str) Name of the JSON file containing the test cases in /testCases
 faultLoc.py tech
 tech  (str) Name of the debugging technique
 
-Available techniques: 
+Available techniques:
   tarantula, crosstab, barinel...
 ```
 
